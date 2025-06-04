@@ -7,10 +7,46 @@ installed and available in your `PATH`.
 ## Build
 
 You will need the GTK3 development libraries and `pkg-config` installed.
+Below are example package commands for common distributions:
+
+### Debian / Ubuntu
 
 ```
 sudo apt-get install build-essential libgtk-3-dev pkg-config youtube-dl
 ```
+
+### Arch Linux
+
+```
+sudo pacman -S base-devel gtk3 youtube-dl
+```
+
+### Fedora
+
+```
+sudo dnf install gcc gtk3-devel pkgconf-pkg-config youtube-dl
+```
+
+### openSUSE
+
+```
+sudo zypper install gcc gtk3-devel pkg-config youtube-dl
+```
+
+### Gentoo
+
+```
+sudo emerge --ask x11-libs/gtk+ net-misc/youtube-dl
+```
+
+### Alpine
+
+```
+sudo apk add build-base gtk+3.0 youtube-dl
+```
+
+The application has been tested on these systems and should also work on other
+Linux distributions that provide GTK3 and `youtube-dl`.
 
 To build the application run:
 
