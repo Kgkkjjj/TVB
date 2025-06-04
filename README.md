@@ -2,7 +2,9 @@
 
 TVB Downloader is a simple GTK3-based GUI application written in C that downloads
 YouTube videos. The program uses `youtube-dl` under the hood, so make sure it is
-installed and available in your `PATH`.
+installed and available in your `PATH`. The interface features a clean layout
+with a sidebar showing downloaded videos and an integrated search box for quick
+access to your archive.
 
 ## Build
 
@@ -60,6 +62,8 @@ This will produce the `tvb-downloader` executable.
 
 Run the application and paste the YouTube URL into the text field, then press the
 **Download** button. The output from `youtube-dl` will be displayed in the window.
+Downloaded video file names are collected in the sidebar on the left. Use the
+search bar above the list to quickly filter your downloaded videos.
 
 The video will be downloaded in the current working directory using the default
 `youtube-dl` settings.
