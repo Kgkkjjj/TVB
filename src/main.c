@@ -26,8 +26,12 @@ static void on_download_clicked(GtkButton *button, gpointer user_data) {
     if(url == NULL || strlen(url) == 0)
         return;
 
+    const gchar *dl = g_getenv("TVB_DOWNLOADER");
+    if(dl == NULL || strlen(dl) == 0)
+        dl = "youtube-dl";
+
     gchar command[1024];
-    snprintf(command, sizeof(command), "youtube-dl \"%s\"", url);
+    snprintf(command, sizeof(command), "%s \"%s\"", dl, url);
 
     gchar *argv[] = {"sh", "-c", command, NULL};
     GPid pid;

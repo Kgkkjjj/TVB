@@ -63,3 +63,21 @@ Run the application and paste the YouTube URL into the text field, then press th
 
 The video will be downloaded in the current working directory using the default
 `youtube-dl` settings.
+
+## Fast Download Options
+
+You can override the downloader command via the `TVB_DOWNLOADER` environment
+variable. This allows using alternative tools for improved performance. Five
+robust options are:
+
+- `youtube-dl` (default)
+- `yt-dlp`
+- `aria2c`
+- `axel`
+- `wget`
+
+Example using `yt-dlp` with `aria2c` for multi-connection downloads:
+
+```bash
+TVB_DOWNLOADER="yt-dlp --external-downloader aria2c" ./tvb-downloader
+```
